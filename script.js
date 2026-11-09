@@ -2,46 +2,6 @@
 // Set this to the real installer URL when you have one.
 const DOWNLOAD_URL = "#";
 
-// Placeholder showcase items (original names; swap in your real catalog).
-const ITEMS = [
-  { name: "Emberforged Mantle", rarity: "arcana", icon: "🔥" },
-  { name: "Frostbound Blade", rarity: "immortal", icon: "❄️" },
-  { name: "Stormcaller Crown", rarity: "legendary", icon: "⚡" },
-  { name: "Voidwalker Cloak", rarity: "mythical", icon: "🌌" },
-  { name: "Thornguard Shield", rarity: "rare", icon: "🛡️" },
-  { name: "Sunfire Courier", rarity: "immortal", icon: "🐉" },
-  { name: "Moonlit Ward", rarity: "mythical", icon: "🌙" },
-  { name: "Bloodmoon Effigy", rarity: "arcana", icon: "🩸" },
-  { name: "Tidebreaker Anchor", rarity: "legendary", icon: "⚓" },
-  { name: "Ironbark Gauntlets", rarity: "rare", icon: "🪵" },
-  { name: "Spectral Terrain", rarity: "immortal", icon: "👻" },
-  { name: "Starlight Announcer", rarity: "mythical", icon: "✨" },
-];
-
-// ---------- Showcase ----------
-const cardsEl = document.getElementById("cards");
-cardsEl.innerHTML = ITEMS.map(
-  (it) => `
-  <article class="card r-${it.rarity}" data-rarity="${it.rarity}">
-    <div class="card__art"><span aria-hidden="true">${it.icon}</span></div>
-    <div class="card__body">
-      <h3>${it.name}</h3>
-      <span class="card__rarity">${it.rarity}</span>
-    </div>
-  </article>`
-).join("");
-
-document.querySelectorAll(".chip").forEach((chip) => {
-  chip.addEventListener("click", () => {
-    document.querySelectorAll(".chip").forEach((c) => c.classList.remove("is-active"));
-    chip.classList.add("is-active");
-    const f = chip.dataset.filter;
-    cardsEl.querySelectorAll(".card").forEach((card) => {
-      card.classList.toggle("is-hidden", f !== "all" && card.dataset.rarity !== f);
-    });
-  });
-});
-
 // ---------- Mobile nav ----------
 const toggle = document.getElementById("navToggle");
 const links = document.getElementById("navLinks");
@@ -78,7 +38,7 @@ const countUp = (el) => {
 };
 
 // ---------- Reveal on scroll ----------
-const revealTargets = document.querySelectorAll(".shot, .feature, .step, .card, .faq details, .section__head");
+const revealTargets = document.querySelectorAll(".shot, .item, .feature, .step, .faq details, .section__head");
 revealTargets.forEach((el) => el.classList.add("reveal"));
 
 const io = new IntersectionObserver(
@@ -146,4 +106,26 @@ document.getElementById("shotLink").addEventListener("click", openLightbox);
 lightbox.addEventListener("click", closeLightbox);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+});
+
+// ---------- Screenshot tabs ----------
+const SHOTS = [
+  { title: "Heroes", src: "assets/app-screenshot.png", w: 1915, h: 1012,
+    alt: "Heroes screen: hero list on the left, cosmetic slots for the selected hero with replacement options, and a Build & Install button" },
+  { title: "Loadout", src: "assets/app-loadout.png", w: 1915, h: 790,
+    alt: "Loadout screen: equipped items for Drow Ranger by slot, with Install, Save, New list, Lists and Clear actions" },
+];
+const shotImg = document.getElementById("shotImg");
+document.querySelectorAll("[data-shot]").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const s = SHOTS[Number(tab.dataset.shot)];
+    document.querySelectorAll("[data-shot]").forEach((t) => {
+      t.classList.toggle("is-active", t === tab);
+      t.setAttribute("aria-selected", String(t === tab));
+    });
+    Object.assign(shotImg, { src: s.src, alt: s.alt, width: s.w, height: s.h });
+    document.getElementById("shotLink").href = s.src;
+    document.getElementById("lightboxImg").src = s.src;
+    document.getElementById("shotTitle").textContent = "Dota2SkinChanger · " + s.title;
+  });
 });

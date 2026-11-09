@@ -381,3 +381,20 @@ p { margin: 0 0 1em; }
   background: none; border: 0; color: var(--text);
   font-size: 2.4rem; line-height: 1; cursor: pointer;
 }
+
+/* Screenshot tabs */
+.shot__tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 24px; }
+
+/* Featured item cards (real app screenshots) */
+.items { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
+.item {
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -18px rgba(0, 0, 0, .9);
+  transition: transform .2s, box-shadow .2s;
+}
+.item img { display: block; width: 180px; height: auto; image-rendering: auto; }
+.item:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 26px 50px -18px rgba(232, 69, 44, .55); }
+.items__more { text-align: center; color: var(--muted); margin: 32px 0 0; }
+@media (max-width: 720px) { .item img { width: 140px; } .items { gap: 16px; } }

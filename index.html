@@ -22,7 +22,7 @@
         <a href="#features">Features</a>
         <a href="#preview">Preview</a>
         <a href="#how">How it works</a>
-        <a href="#showcase">Showcase</a>
+        <a href="#showcase">Items</a>
         <a href="#faq">FAQ</a>
         <a href="#download" class="btn btn--sm">Download</a>
       </nav>
@@ -95,11 +95,15 @@
         <h2>See it in action</h2>
         <p>Pick a hero, swap any slot, save the look as a pack, then hit Build &amp; Install.</p>
       </div>
+      <div class="shot__tabs" role="tablist" aria-label="App screens">
+        <button class="chip is-active" role="tab" aria-selected="true" data-shot="0">Heroes</button>
+        <button class="chip" role="tab" aria-selected="false" data-shot="1">Loadout</button>
+      </div>
       <figure class="shot">
-        <div class="shot__bar"><i></i><i></i><i></i><span>Dota2SkinChanger</span></div>
+        <div class="shot__bar"><i></i><i></i><i></i><span id="shotTitle">Dota2SkinChanger · Heroes</span></div>
         <a href="assets/app-screenshot.png" class="shot__link" id="shotLink">
-          <img src="assets/app-screenshot.png" width="1915" height="1012" loading="lazy"
-               alt="Dota2SkinChanger app: hero list on the left, cosmetic slots for the selected hero with replacement options, and a Build & Install button" />
+          <img id="shotImg" src="assets/app-screenshot.png" width="1915" height="1012" loading="lazy"
+               alt="Heroes screen: hero list on the left, cosmetic slots for the selected hero with replacement options, and a Build &amp; Install button" />
           <span class="shot__zoom">Click to enlarge</span>
         </a>
       </figure>
@@ -115,7 +119,7 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" hidden>
     <button class="lightbox__close" aria-label="Close">×</button>
-    <img src="assets/app-screenshot.png" alt="Dota2SkinChanger app screenshot, full size" />
+    <img id="lightboxImg" src="assets/app-screenshot.png" alt="Dota2SkinChanger app screenshot, full size" />
   </div>
 
   <!-- FEATURES -->
@@ -190,18 +194,16 @@
   <section class="section" id="showcase">
     <div class="container">
       <div class="section__head">
-        <h2>Browse by rarity</h2>
-        <p>Filter thousands of items in the app. Here's a taste.</p>
+        <h2>Featured items</h2>
+        <p>Arcanas, immortals, couriers and more, all a click away in the app.</p>
       </div>
-      <div class="filters" role="tablist">
-        <button class="chip is-active" data-filter="all">All</button>
-        <button class="chip" data-filter="arcana">Arcana</button>
-        <button class="chip" data-filter="immortal">Immortal</button>
-        <button class="chip" data-filter="legendary">Legendary</button>
-        <button class="chip" data-filter="mythical">Mythical</button>
-        <button class="chip" data-filter="rare">Rare</button>
+      <div class="items">
+        <figure class="item"><img src="assets/items/maw-of-the-megalodon.png" width="122" height="153" loading="lazy" alt="Maw of the Megalodon - Base, Arcana" /></figure>
+        <figure class="item"><img src="assets/items/vigil-triumph.png" width="119" height="164" loading="lazy" alt="Vigil Triumph, Immortal" /></figure>
+        <figure class="item"><img src="assets/items/ice-baby-roshan.png" width="128" height="167" loading="lazy" alt="Ice Baby Roshan, Courier" /></figure>
+        <figure class="item"><img src="assets/items/silent-wake.png" width="124" height="148" loading="lazy" alt="Silent Wake of the Crimson Witness, Back slot" /></figure>
       </div>
-      <div class="cards" id="cards"><!-- filled by script.js --></div>
+      <p class="items__more">+ thousands more in the app</p>
     </div>
   </section>
 

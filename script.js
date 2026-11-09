@@ -38,7 +38,7 @@ const countUp = (el) => {
 };
 
 // ---------- Reveal on scroll ----------
-const revealTargets = document.querySelectorAll(".shot, .item, .feature, .step, .faq details, .section__head");
+const revealTargets = document.querySelectorAll(".shot, .item, .spot, .feature, .step, .faq details, .section__head");
 revealTargets.forEach((el) => el.classList.add("reveal"));
 
 const io = new IntersectionObserver(
@@ -114,6 +114,10 @@ const SHOTS = [
     alt: "Heroes screen: hero list on the left, cosmetic slots for the selected hero with replacement options, and a Build & Install button" },
   { title: "Loadout", src: "assets/app-loadout.png", w: 1915, h: 790,
     alt: "Loadout screen: equipped items for Drow Ranger by slot, with Install, Save, New list, Lists and Clear actions" },
+  { title: "Find items", src: "assets/app-find-items.png", w: 996, h: 417,
+    alt: "Find Items screen with the Steam inventory tab: paste a Steam inventory link or SteamID64 and load it" },
+  { title: "Effects", src: "assets/app-effects.png", w: 1704, h: 775,
+    alt: "Ability and Item Effects screen: a grid of 31 effect categories with variant counts" },
 ];
 const shotImg = document.getElementById("shotImg");
 document.querySelectorAll("[data-shot]").forEach((tab) => {
@@ -129,3 +133,15 @@ document.querySelectorAll("[data-shot]").forEach((tab) => {
     document.getElementById("shotTitle").textContent = "Dota2SkinChanger · " + s.title;
   });
 });
+
+// ---------- Zoom any .js-zoom image into the lightbox ----------
+document.querySelectorAll(".js-zoom").forEach((a) => {
+  a.addEventListener("click", (e) => {
+    document.getElementById("lightboxImg").src = a.getAttribute("href");
+    openLightbox(e);
+  });
+});
+// Keep lightbox in sync with the main preview when it's opened from there
+document.getElementById("shotLink").addEventListener("click", () => {
+  document.getElementById("lightboxImg").src = document.getElementById("shotLink").getAttribute("href");
+}, true);

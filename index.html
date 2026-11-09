@@ -21,6 +21,7 @@
       <nav class="nav__links" id="navLinks">
         <a href="#features">Features</a>
         <a href="#preview">Preview</a>
+        <a href="#spotlight">Inventory copy</a>
         <a href="#how">How it works</a>
         <a href="#showcase">Items</a>
         <a href="#faq">FAQ</a>
@@ -98,6 +99,8 @@
       <div class="shot__tabs" role="tablist" aria-label="App screens">
         <button class="chip is-active" role="tab" aria-selected="true" data-shot="0">Heroes</button>
         <button class="chip" role="tab" aria-selected="false" data-shot="1">Loadout</button>
+        <button class="chip" role="tab" aria-selected="false" data-shot="2">Find items</button>
+        <button class="chip" role="tab" aria-selected="false" data-shot="3">Effects</button>
       </div>
       <figure class="shot">
         <div class="shot__bar"><i></i><i></i><i></i><span id="shotTitle">Dota2SkinChanger · Heroes</span></div>
@@ -122,6 +125,53 @@
     <img id="lightboxImg" src="assets/app-screenshot.png" alt="Dota2SkinChanger app screenshot, full size" />
   </div>
 
+  <!-- SPOTLIGHT -->
+  <section class="section section--alt" id="spotlight">
+    <div class="container">
+      <div class="spot">
+        <div class="spot__text">
+          <span class="pill">New · Steam inventory copy</span>
+          <h2>Copy any player's inventory</h2>
+          <p>
+            Like someone's look? Paste their public Steam inventory link or SteamID64, hit
+            <strong>Load inventory</strong>, and equip their items onto your heroes in one go.
+          </p>
+          <ul class="ticks">
+            <li>Works with any public Steam inventory</li>
+            <li>Search by item name, ID, hero, Legacy, RGB or #hex colour</li>
+            <li>Prismatic gem colours are read straight from Steam</li>
+            <li>Large inventories load 2,000 items at a time</li>
+          </ul>
+        </div>
+        <a href="assets/app-find-items.png" class="spot__media js-zoom">
+          <img src="assets/app-find-items.png" width="996" height="417" loading="lazy"
+               alt="Find Items screen with the Steam inventory tab: a field to paste a Steam inventory link or SteamID64 and a Load Inventory button" />
+        </a>
+      </div>
+
+      <div class="spot spot--rev">
+        <div class="spot__text">
+          <span class="pill">31 categories</span>
+          <h2>Ability &amp; item effects</h2>
+          <p>
+            It's not just hero sets. Restyle the effects you see every game, from blinks and teleports
+            to Dagon beams, Force Staff pushes and Roshan.
+          </p>
+          <ul class="ticks">
+            <li>81 teleport variants, 46 fountain effects, 32 blink effects</li>
+            <li>Aegis, Aghanim's, Bottle, Eul's, Radiance, Mjollnir and more</li>
+            <li>Level-up, last-hit, stun and silence effects</li>
+            <li>Tower, creep, Ancient, Tormentor and Roshan effects</li>
+          </ul>
+        </div>
+        <a href="assets/app-effects.png" class="spot__media js-zoom">
+          <img src="assets/app-effects.png" width="1704" height="775" loading="lazy"
+               alt="Ability and Item Effects screen: a grid of 31 effect categories such as Aegis, Blink, Bottle, Dagon, Force Staff, Teleport and Roshan effects, each with a variant count" />
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section class="section" id="features">
     <div class="container">
@@ -138,7 +188,7 @@
         <article class="feature">
           <div class="feature__icon">🔍</div>
           <h3>Full item library</h3>
-          <p>Searchable catalog of sets, arcanas, couriers, wards, terrains, HUDs and announcers.</p>
+          <p>Searchable catalog of sets, arcanas, couriers, wards, terrains, HUDs, announcers and 31 categories of ability &amp; item effects.</p>
         </article>
         <article class="feature">
           <div class="feature__icon">👁️</div>
@@ -156,9 +206,9 @@
           <p>Save loadouts, share them with friends, and restore original files any time with one click.</p>
         </article>
         <article class="feature">
-          <div class="feature__icon">🪶</div>
-          <h3>Lightweight</h3>
-          <p>Under 20&nbsp;MB, no background processes while you play. Zero impact on FPS.</p>
+          <div class="feature__icon">📋</div>
+          <h3>Copy any inventory</h3>
+          <p>Load any public Steam inventory and wear the same items on your own heroes.</p>
         </article>
       </div>
     </div>

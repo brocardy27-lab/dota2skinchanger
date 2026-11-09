@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dota2SkinChanger — Unlock Every Look, Client-Side</title>
+  <meta name="description" content="Dota2SkinChanger lets you preview and apply cosmetic sets locally. Fast, lightweight, and updated every patch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span>DOTA2<b>SKIN</b>CHANGER</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download" class="btn btn--sm">Download</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="pill">v3.2 · Updated for the latest patch</span>
+        <h1>Every cosmetic.<br /><span class="grad">Every hero.</span> Your client.</h1>
+        <p class="lead">
+          Preview and apply any cosmetic set, courier, ward or effect locally in seconds.
+          A lightweight changer that doesn't touch your account or inventory.
+        </p>
+        <div class="hero__cta">
+          <a href="#download" class="btn btn--lg">Download free</a>
+          <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+        </div>
+        <ul class="stats">
+          <li><strong data-count="12000">0</strong><span>+ items</span></li>
+          <li><strong data-count="126">0</strong><span>heroes</span></li>
+          <li><strong data-count="250000">0</strong><span>+ downloads</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__card" aria-hidden="true">
+        <div class="mock">
+          <div class="mock__bar"><i></i><i></i><i></i><span>Dota2SkinChanger</span></div>
+          <div class="mock__body">
+            <aside class="mock__side">
+              <div class="mock__search">Search heroes…</div>
+              <div class="mock__item is-active">Strength</div>
+              <div class="mock__item">Agility</div>
+              <div class="mock__item">Intelligence</div>
+              <div class="mock__item">Universal</div>
+              <div class="mock__item">Couriers</div>
+              <div class="mock__item">Wards</div>
+            </aside>
+            <div class="mock__grid">
+              <div class="slot r-arcana"></div>
+              <div class="slot r-immortal"></div>
+              <div class="slot r-legendary"></div>
+              <div class="slot r-mythical"></div>
+              <div class="slot r-rare"></div>
+              <div class="slot r-immortal"></div>
+              <div class="slot r-mythical"></div>
+              <div class="slot r-arcana"></div>
+              <div class="slot r-rare"></div>
+            </div>
+          </div>
+          <div class="mock__footer">
+            <span class="dot"></span> 14 items queued
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__head">
+        <h2>Built for players who care about the look</h2>
+        <p>Everything you need to customize your game, nothing you don't.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <div class="feature__icon">⚡</div>
+          <h3>One-click apply</h3>
+          <p>Pick a set, hit Apply and launch. Changes are written in seconds, no manual file editing.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🔍</div>
+          <h3>Full item library</h3>
+          <p>Searchable catalog of sets, arcanas, couriers, wards, terrains, HUDs and announcers.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">👁️</div>
+          <h3>Client-side only</h3>
+          <p>Visuals are changed on your machine only. Your account, inventory and matches are untouched.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🔄</div>
+          <h3>Patch-day updates</h3>
+          <p>Auto-updater pulls new items and fixes shortly after every game update.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">💾</div>
+          <h3>Presets &amp; backups</h3>
+          <p>Save loadouts, share them with friends, and restore original files any time with one click.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🪶</div>
+          <h3>Lightweight</h3>
+          <p>Under 20&nbsp;MB, no background processes while you play. Zero impact on FPS.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--alt" id="how">
+    <div class="container">
+      <div class="section__head">
+        <h2>Up and running in 3 steps</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3>Download &amp; run</h3>
+          <p>Grab the installer, run it, and point it at your game folder (auto-detected in most cases).</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3>Pick your items</h3>
+          <p>Browse by hero or slot, preview rarities, and build the loadout you want.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3>Apply &amp; play</h3>
+          <p>Click Apply, launch the game, and enjoy. Revert with one click whenever you like.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section class="section" id="showcase">
+    <div class="container">
+      <div class="section__head">
+        <h2>Browse by rarity</h2>
+        <p>Filter thousands of items in the app. Here's a taste.</p>
+      </div>
+      <div class="filters" role="tablist">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="arcana">Arcana</button>
+        <button class="chip" data-filter="immortal">Immortal</button>
+        <button class="chip" data-filter="legendary">Legendary</button>
+        <button class="chip" data-filter="mythical">Mythical</button>
+        <button class="chip" data-filter="rare">Rare</button>
+      </div>
+      <div class="cards" id="cards"><!-- filled by script.js --></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes. The core changer is free to download and use.</p>
+        </details>
+        <details>
+          <summary>Can other players see my skins?</summary>
+          <p>No. Changes are client-side only, so only you see them. Other players see your real equipped items.</p>
+        </details>
+        <details>
+          <summary>Can I get banned?</summary>
+          <p>
+            Modifying game files may go against the game's Terms of Service. The tool only changes visuals and
+            gives no gameplay advantage, but we can't guarantee how the publisher will treat it.
+            <strong>Use at your own risk.</strong>
+          </p>
+        </details>
+        <details>
+          <summary>Does it work after a game update?</summary>
+          <p>Updates can reset your files. Re-open the app after a patch. It'll update itself and re-apply your preset.</p>
+        </details>
+        <details>
+          <summary>How do I remove everything?</summary>
+          <p>Click <em>Restore originals</em> in the app, or verify game files through your game launcher.</p>
+        </details>
+        <details>
+          <summary>My antivirus flagged the file. Why?</summary>
+          <p>
+            Tools that modify game files are sometimes flagged heuristically. Only download from this site
+            and verify the SHA-256 checksum we publish with each release.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="section download" id="download">
+    <div class="container download__inner">
+      <h2>Ready to change your look?</h2>
+      <p>Windows 10/11 · 64-bit · ~18&nbsp;MB</p>
+      <a href="#" class="btn btn--lg" id="downloadBtn">Download for Windows</a>
+      <code class="checksum">Test build: download not available yet</code>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#top" class="logo logo--sm">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span>DOTA2<b>SKIN</b>CHANGER</span>
+        </a>
+        <p class="muted">© <span id="year"></span> Dota2SkinChanger. All rights reserved.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Discord</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="disclaimer">
+        Dota2SkinChanger is an independent fan project and is not affiliated with, endorsed by, or sponsored by
+        Valve Corporation. Dota 2 and Steam are trademarks of Valve Corporation. All other trademarks are the
+        property of their respective owners.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

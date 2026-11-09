@@ -428,3 +428,28 @@ p { margin: 0 0 1em; }
   .spot--rev .spot__text { order: 0; }
   .spot + .spot { margin-top: 70px; }
 }
+
+/* ---------- Image sizing fixes ---------- */
+/* Preview: fixed frame so switching tabs doesn't jump; every screenshot fits fully */
+.shot__link { aspect-ratio: 1915 / 1012; background: #1b2028; }
+.shot__link img { width: 100%; height: 100%; object-fit: contain; }
+.shot__tabs { flex-wrap: wrap; }
+
+/* Spotlights: both screenshots get the same width, whichever side they're on */
+.spot { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
+.spot--rev { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.spot--rev .spot__text { order: 2; }
+.spot__media { background: #1b2028; }
+
+/* Featured item cards: same height for all four */
+.item { background: #1b2028; }
+.item img { width: auto; height: 220px; }
+
+@media (max-width: 1000px) {
+  .spot, .spot--rev { grid-template-columns: minmax(0, 1fr); }
+  .spot--rev .spot__text { order: 0; }
+}
+@media (max-width: 720px) {
+  .item img { width: auto; height: 170px; }
+  .items { gap: 14px; }
+}

@@ -38,7 +38,7 @@ const countUp = (el) => {
 };
 
 // ---------- Reveal on scroll ----------
-const revealTargets = document.querySelectorAll(".shot, .item, .spot, .feature, .step, .faq details, .section__head");
+const revealTargets = document.querySelectorAll(".shot, .item, .spot, .feature, .step, .section__head");
 revealTargets.forEach((el) => el.classList.add("reveal"));
 
 const io = new IntersectionObserver(

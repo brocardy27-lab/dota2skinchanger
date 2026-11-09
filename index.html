@@ -20,6 +20,7 @@
       </a>
       <nav class="nav__links" id="navLinks">
         <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
         <a href="#how">How it works</a>
         <a href="#showcase">Showcase</a>
         <a href="#faq">FAQ</a>
@@ -44,7 +45,7 @@
         </p>
         <div class="hero__cta">
           <a href="#download" class="btn btn--lg">Download free</a>
-          <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+          <a href="#preview" class="btn btn--ghost btn--lg">See it in action</a>
         </div>
         <ul class="stats">
           <li><strong data-count="12000">0</strong><span>+ items</span></li>
@@ -86,6 +87,36 @@
       </div>
     </div>
   </section>
+
+  <!-- PREVIEW -->
+  <section class="section preview" id="preview">
+    <div class="container">
+      <div class="section__head">
+        <h2>See it in action</h2>
+        <p>Pick a hero, swap any slot, save the look as a pack, then hit Build &amp; Install.</p>
+      </div>
+      <figure class="shot">
+        <div class="shot__bar"><i></i><i></i><i></i><span>Dota2SkinChanger</span></div>
+        <a href="assets/app-screenshot.png" class="shot__link" id="shotLink">
+          <img src="assets/app-screenshot.png" width="1915" height="1012" loading="lazy"
+               alt="Dota2SkinChanger app: hero list on the left, cosmetic slots for the selected hero with replacement options, and a Build & Install button" />
+          <span class="shot__zoom">Click to enlarge</span>
+        </a>
+      </figure>
+      <ul class="shot__tags">
+        <li>Hero loadouts</li>
+        <li>Per-slot replacements</li>
+        <li>Saved packs</li>
+        <li>World · Interface · Audio · Effects</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <img src="assets/app-screenshot.png" alt="Dota2SkinChanger app screenshot, full size" />
+  </div>
 
   <!-- FEATURES -->
   <section class="section" id="features">

@@ -78,7 +78,7 @@ const countUp = (el) => {
 };
 
 // ---------- Reveal on scroll ----------
-const revealTargets = document.querySelectorAll(".feature, .step, .card, .faq details, .section__head");
+const revealTargets = document.querySelectorAll(".shot, .feature, .step, .card, .faq details, .section__head");
 revealTargets.forEach((el) => el.classList.add("reveal"));
 
 const io = new IntersectionObserver(
@@ -128,3 +128,22 @@ function showToast(msg) {
   showToast._h = setTimeout(() => t.classList.remove("is-shown"), 2800);
 }
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---------- Screenshot lightbox ----------
+const lightbox = document.getElementById("lightbox");
+const openLightbox = (e) => {
+  e.preventDefault();
+  lightbox.hidden = false;
+  document.body.style.overflow = "hidden";
+  lightbox.querySelector(".lightbox__close").focus();
+};
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  document.body.style.overflow = "";
+  document.getElementById("shotLink").focus();
+};
+document.getElementById("shotLink").addEventListener("click", openLightbox);
+lightbox.addEventListener("click", closeLightbox);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+});

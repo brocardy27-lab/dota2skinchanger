@@ -1,6 +1,6 @@
 // ---------- Config ----------
 // Set this to the real installer URL when you have one.
-const DOWNLOAD_URL = "#";
+const DOWNLOAD_URL = "https://github.com/brocardy27-lab/dota2skinchanger/releases/latest";
 
 // ---------- Mobile nav ----------
 const toggle = document.getElementById("navToggle");
